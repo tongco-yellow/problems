@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] numlist, int n) {
-        int[] answer = Arrays.stream(numlist)
+        return Arrays.stream(numlist)
             .boxed()
             .sorted(Comparator.
                 <Integer>comparingInt(k -> Math.abs(n - k))
@@ -10,6 +10,5 @@ class Solution {
             )
             .mapToInt(Integer::intValue)
             .toArray();
-        return answer;
     }
 }
