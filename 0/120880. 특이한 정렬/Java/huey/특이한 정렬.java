@@ -6,7 +6,7 @@ class Solution {
             .boxed()
             .sorted(Comparator
                 .comparingInt((Integer k) -> Math.abs(n - k))
-                .thenComparingInt(k -> - k)
+                .thenComparing(Comparator.reverseOrder())
             )
             .mapToInt(Integer::intValue)
             .toArray();
