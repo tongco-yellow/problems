@@ -4,8 +4,8 @@ class Solution {
     public int[] solution(int[] numlist, int n) {
         return Arrays.stream(numlist)
             .boxed()
-            .sorted(Comparator.
-                <Integer>comparingInt(k -> Math.abs(n - k))
+            .sorted(Comparator
+                .comparingInt((Integer k) -> Math.abs(n - k))
                 .thenComparingInt(k -> - k)
             )
             .mapToInt(Integer::intValue)
