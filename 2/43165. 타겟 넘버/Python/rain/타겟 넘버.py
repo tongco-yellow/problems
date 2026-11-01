@@ -13,4 +13,5 @@ def solution(numbers, target):
         dfs(idx + 1, total - numbers[idx])
 
     dfs(0, 0)
+    
     return answer
