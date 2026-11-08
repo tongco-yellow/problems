@@ -1,4 +1,3 @@
-
 def solution(spell, dic):
     answer = 2
     visited = [False] * len(spell)
