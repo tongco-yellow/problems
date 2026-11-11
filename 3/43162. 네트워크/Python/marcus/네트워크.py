@@ -3,13 +3,13 @@ def solution(n, computers):
     answer = 0
     def dfs(a, b):
         passed[b] = True
-        for k in range(n):
-            if computers[b][k] == 1 and passed[k] == False:
-                dfs(b, k)
+        for i in range(n):
+            if computers[b][i] == 1 and passed[i] == False:
+                dfs(b, i)
     
-    for i in range(n):
-        for j in range(i, n):
-            if computers[i][j] == 1 and passed[j] == False:
-                dfs(i, j)
+    for j in range(n):
+        for k in range(j, n):
+            if computers[j][k] == 1 and passed[k] == False:
+                dfs(j, k)
                 answer += 1
     return answer
