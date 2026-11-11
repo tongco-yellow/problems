@@ -8,7 +8,7 @@
 
 def solution(progresses, speeds):
     answer = []
-    days = []
+    dayss = []
 
     for i in range(len(progresses)):
         progress = progresses[i]
@@ -18,17 +18,17 @@ def solution(progresses, speeds):
             progress += speeds[i]
             day += 1
 
-        days.append(day)
+        dayss.append(day)
 
-    current = days[0]
+    current = dayss[0]
     count = 1
 
-    for i in range(1, len(days)):
-        if days[i] <= current:
+    for i in range(1, len(dayss)):
+        if dayss[i] <= current:
             count += 1
         else:
             answer.append(count)
-            current = days[i]
+            current = dayss[i]
             count = 1
 
     answer.append(count)
